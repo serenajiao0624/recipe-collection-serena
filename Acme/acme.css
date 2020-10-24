@@ -1,0 +1,159 @@
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: dodgerblue;
+    color: white;
+    font-family: Verdana; 
+    margin: 0;
+    padding: 0;
+    padding-left: 0.7rem;
+    padding-right: 3rem;
+    height: 3.5rem;
+}
+
+.bar li:first-child {
+    font-size: 1.8rem;
+}
+
+.bar li:nth-child(2) {
+    font-weight: bold;
+}
+
+h1 {
+    color: dimgray;
+    font-family: Verdana;
+    margin: 0.7rem;
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+}
+
+h2 {
+    color: dimgray;
+    font-family: Verdana;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+div {
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 75%;
+    margin: auto;
+    position: relative;
+    padding-left: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+div nav {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+input {
+    flex-grow: 0.9;
+    color: gray;
+}
+
+select {
+    flex-grow: 0.94;
+    background-color: whitesmoke;
+    border: none;
+}
+
+label {
+    width: 110px;
+}
+
+#first {
+    display: flex;
+    color: dimgray;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 0.8rem;
+    align-items: center;
+    border: none;
+}
+
+#last {
+    display: flex;
+    color: dimgray;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 0.8rem;
+    align-items: center;
+    border: none;
+}
+
+#department {
+    display: flex;
+    color: dimgray;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 0.8rem;
+    align-items: center;
+    border: none;
+}
+
+#button {
+    border: none;
+    font-family: Verdana;
+    display: flex;
+    width: 100px;
+    margin: auto;
+    position: relative;
+    padding-top: 0.4rem; 
+
+}
+
+#c {
+    color: black;
+    border: square;
+    margin-right: -4px;
+    border-radius: 0px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    
+}
+
+#s {
+    margin: none;
+    padding: none;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    border: 1px solid black;
+}
+
+#boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    width: 95%;
+    margin-top: 40px;
+}
+
+#boxes div {
+    width: 30%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+#boxes h1 {
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+#boxes p {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 20px;
+    
+}

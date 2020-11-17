@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended:false }));
 //app.use(require('method-override')('_method'));
 app.use('/', express.static(path.join(__dirname)));
 
-app.get('/home',async(req,res,next)=>{
+app.get('/',async(req,res,next)=>{
     try{
         res.send(`
             <html>
@@ -41,7 +41,7 @@ app.get('/home',async(req,res,next)=>{
     }
 })
 
-app.get('/home/students',async(req,res,next)=>{
+app.get('/students',async(req,res,next)=>{
     try{
         const students = await Students.findAll({
             include:[
@@ -138,7 +138,7 @@ app.get('/home/students',async(req,res,next)=>{
     }
 })
 
-app.get('/home/mentors', async(req,res,next) => {
+app.get('/mentors', async(req,res,next) => {
     try{
         const mentors = await Mentors.findAll({
             include:[
@@ -208,7 +208,7 @@ app.get('/home/mentors', async(req,res,next) => {
 })
 
 
-app.get('/home/bookings', async(req,res,next)=>{
+app.get('/bookings', async(req,res,next)=>{
     try{
         const bookings = await Bookings.findAll({
             include: [  

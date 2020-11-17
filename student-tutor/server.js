@@ -20,13 +20,13 @@ app.get('/',async(req,res,next)=>{
                     <img src = "logo.jpg"> 
                     <nav>
                         <ul>
-                            <a href = '/home/students'>
+                            <a href = '/students'>
                                 <li> Students </li>
                             </a>
-                            <a href = '/home/mentors'>
+                            <a href = '/mentors'>
                                 <li> Mentors </li>
                             </a>
-                            <a href = '/home/bookings'>
+                            <a href = '/bookings'>
                                 <li> Bookings </li>
                             </a>
                         </ul>
@@ -72,8 +72,8 @@ app.get('/students',async(req,res,next)=>{
                     <link rel = 'stylesheet' href = '/style.css' />
                 </head>
                 <header>
-                    <a href = '/home' style = 'color: black;'>
-                    Back
+                    <a href = '/' style = 'color: black;'>
+                    Back to Home Page
                     </a>
                 </header>
                 <body>
@@ -166,8 +166,8 @@ app.get('/mentors', async(req,res,next) => {
                 <link rel = 'stylesheet' href = '/style.css' />
             </head>
             <header>
-            <a href = '/home' style = 'color: black;'>
-            Back
+            <a href = '/' style = 'color: black;'>
+            Back to Home Page
             </a>
             </header>
             <body>
@@ -228,8 +228,8 @@ app.get('/bookings', async(req,res,next)=>{
                 <link rel = 'stylesheet' href = '/style.css' />
             </head>
             <header>
-            <a href = '/home' style = 'color: black;'>
-            Back
+            <a href = '/' style = 'color: black;'>
+            Back to Home Page
             </a>
             </header>
             <body>

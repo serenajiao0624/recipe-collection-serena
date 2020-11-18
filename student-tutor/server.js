@@ -17,8 +17,8 @@ app.get('/',async(req,res,next)=>{
                     <link rel = 'stylesheet' href = '/style.css' />
                 </head>
                 <body id = 'home'>
-                    <img src = "logo.jpg"> 
                     <nav>
+                        <img src = "logo.jpg"> 
                         <ul>
                             <a href = '/students'>
                                 <li> Students </li>
@@ -66,6 +66,12 @@ app.get('/students',async(req,res,next)=>{
                 referredarr.push('none');
             }
         }) 
+        const names = students.map(student => student.name);
+        const subjects = students.map(student => student.subject);
+        const purchased = students.map(student => student.purchased  + ' hour(s)');
+        const mentors = students.map(student => student.mentor.name)
+        const bookings = students.map(student => 
+            student.bookings.map(booking => 'On ' + booking.startTime + ' for ' + booking.duration).join("<br>"));
         res.send(`
             <html>
                 <head>
@@ -78,56 +84,65 @@ app.get('/students',async(req,res,next)=>{
                 </header>
                 <body>
                     <h1> Students (${students.length}) </h1>
-                    <div id = "students">
-                        <ul>
-                            <b>Student</b>
-                            ${ students.map( student => `
-                            <li>
-                                ${student.name} 
-                            </li>
-                            `).join('')}
-                        </ul>
-                        <ul>
-                            <b>Subject</b>
-                            ${ students.map( student => `
-                            <li>
-                                ${student.subject} 
-                            </li>
-                            `).join('')}
-                        </ul>
-                        <ul>
-                            <b>Purchased</b>
-                            ${ students.map( student => `
-                            <li>
-                                ${student.purchased} hrs
-                            </li>
-                            `).join('')}
-                        </ul>
-                        <ul>
-                            <b>Referred by</b>
-                            ${ referredarr.map( refer => `
-                            <li>
-                                ${refer} 
-                            </li>
-                            `).join('')}
-                        </ul>
-                        <ul>
-                            <b>Mentor</b>
-                            ${ students.map( student => `
-                            <li>
-                                ${student.mentor.name} 
-                            </li>
-                            `).join('')}
-                        </ul>
-                        <ul>
-                            <b>Bookings</b>
-                            ${ students.map( student => `
-                            <li>
-                                ${student.bookings.map(booking => 'On ' + booking.startTime + ' for ' + booking.duration + ' hour(s)').join(', ')} 
-                            </li>
-                            `).join('')}
-                        </ul>
-                    </div>
+                    <table>
+                    <tr>
+                        <th width = "100px">Student</th>
+                        <th width = "200px">Subject</th>
+                        <th width = "300px">Purchased</th>
+                        <th width = "150px">Referred by</th>
+                        <th width = "100px">Mentor</th>
+                        <th width = "500px">Bookings</th>
+                    </tr>
+                    <tr>
+                        <td>${names[0]}</td>
+                        <td>${subjects[0]}</td>
+                        <td>${purchased[0]}</td>
+                        <td>${referredarr[0]}</td>
+                        <td>${mentors[0]}</td>
+                        <td>${bookings[0]}</td>
+                    </tr>
+                    <tr>
+                        <td>${names[1]}</td>
+                        <td>${subjects[1]}</td>
+                        <td>${purchased[1]}</td>
+                        <td>${referredarr[1]}</td>
+                        <td>${mentors[1]}</td>
+                        <td>${bookings[1]}</td>
+                    </tr>
+                    <tr>
+                        <td>${names[2]}</td>
+                        <td>${subjects[2]}</td>
+                        <td>${purchased[2]}</td>
+                        <td>${referredarr[2]}</td>
+                        <td>${mentors[2]}</td>
+                        <td>${bookings[2]}</td>
+                    </tr>
+                    <tr>
+                        <td>${names[3]}</td>
+                        <td>${subjects[3]}</td>
+                        <td>${purchased[3]}</td>
+                        <td>${referredarr[3]}</td>
+                        <td>${mentors[3]}</td>
+                        <td>${bookings[3]}</td>
+                    </tr>
+                    <tr>
+                        <td>${names[4]}</td>
+                        <td>${subjects[4]}</td>
+                        <td>${purchased[4]}</td>
+                        <td>${referredarr[4]}</td>
+                        <td>${mentors[4]}</td>
+                        <td>${bookings[4]}</td>
+                    </tr>
+                    <tr>
+                        <td>${names[5]}</td>
+                        <td>${subjects[5]}</td>
+                        <td>${purchased[5]}</td>
+                        <td>${referredarr[5]}</td>
+                        <td>${mentors[5]}</td>
+                        <td>${bookings[5]}</td>
+                    </tr>
+                </table>
+
                 </body>
             </html>
         

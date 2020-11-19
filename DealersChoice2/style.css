@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana;
+    background-color: lightpink;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: -820px;
+}
+
+#detail {
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+a {
+    color: black;
+}
+
+li {    
+    padding-bottom: 2rem;
+}
+
+img {
+    width: 30%;
+    padding-bottom: 3rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
